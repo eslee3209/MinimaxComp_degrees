@@ -15,9 +15,12 @@ int main() {
 	bool is_comp = false;	// true: comparison operation, false: max/ReLU operation
 	long level = 22;		// total level consumption D. just for compute_min_multdepth_update
 
+	// by default
+	RR epsilon = max_factor*pow(RR(2),RR(-alpha));
+
 	// ComputeMinMultDegs or ComputeMinTimeDegs
-	// compute_min_multdepth(RR(alpha), max_factor*pow(RR(2),RR(-alpha)), maxdeg, is_comp);
-	compute_min_multdepth_update(RR(alpha), max_factor*pow(RR(2),RR(-alpha)), level, maxdeg, is_comp);
+	// compute_min_multdepth(RR(alpha), epsilon, maxdeg, is_comp);
+	compute_min_multdepth_update(RR(alpha), epsilon, level, maxdeg, is_comp);
 
 
 
